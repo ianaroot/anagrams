@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Welcome to the Anagram Finder!</h1>
+  <p>This is gonna be badass.</p>
+
+  <% if @anagram %>
+    <p>Here is a list of anagrams for <span id="anagram_choice"><%= @anagram %></span>.</p>
+  <% end %>
+
+  <form action="/anagram" method="post">
+    Enter a word to anagrammize:
+    <br>
+    <input type="text" name="user_input">
+    <input type="submit" value="ANAGRAM!">
+  </form>
+</div>
