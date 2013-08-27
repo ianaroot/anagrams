@@ -4,12 +4,13 @@
 
   <% if @anagram %>
     <p>Here is a list of anagrams for <span id="anagram_choice"><%= @anagram %></span>.</p>
+    <p><%= Word.anagrammify(@anagram) %></p>
   <% end %>
 
   <form action="/anagram" method="post">
     Enter a word to anagrammize:
     <br>
     <input type="text" name="user_input">
-    <input type="submit" value="ANAGRAM!">
+    <input type="submit" value="ANAGRAMMIFY!">
   </form>
 </div>
